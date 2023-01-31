@@ -5,7 +5,7 @@ from PIL import Image
 
 #Main Content Goes Here
 st.set_page_config(
-    page_title="JASON AIsdfsdf",
+    page_title="JASON AIdfsdgfsdf",
     page_icon="👋",
 )
 
