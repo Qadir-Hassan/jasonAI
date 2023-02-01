@@ -1,0 +1,20 @@
+import cohere
+co = cohere.Client('NzNGw37GFezZIZcVa7P6vKPIUcDmiNfPS2mhhSPf') # This is your trial API key
+response = co.generate(
+  model='6c17f430-f7a9-4e5c-ae36-322ab2f1d903-ft',
+  prompt='iphone plus',
+  max_tokens=300,
+  temperature=0.9,
+  k=0,
+  p=0.75,
+  frequency_penalty=0,
+  presence_penalty=0,
+  stop_sequences=[],
+  return_likelihoods='NONE')
+print('Prediction: {}'.format(response.generations[0].text))
+
+
+
+
+//////
+'Given a phone name, this program will generate relevant phone details.\n\niphone 14: iphone 14 plus mobile\n Details: is still a great phone. A nice update to the iPhone 5C that comes in five vibrant colors. It is a more durable plastic shell that is  designed to protect the iPhone from any damages. At the end of the day, if you need an iPhone with LTE and are happy with a smaller screen, the iPhone SE is the best choice for you.'\nmobile: {}\nDetails:'.format.(input),
