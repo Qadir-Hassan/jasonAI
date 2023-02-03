@@ -4,20 +4,22 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-
-co = cohere.Client('xGECIS7W6UZvlHvmsoj4ArmhxBpfMlJKg2spNOzr') 
+#API key
+co = cohere.Client('SOtiECjBHrLmJMpIeA9HyVlqhhSoNFLOdg5Tc1bp') 
 
 # Initialization
 if 'output' not in st.session_state:
     st.session_state['output'] = 'Output:'
 
+# Function to generate the mobile details
 def generate_mobile_details(input):
     if len(input) == 0:
         return None
     response = co.generate( 
-    model='6c17f430-f7a9-4e5c-ae36-322ab2f1d903-ft',
-    prompt=f"The Details and specification for this mobile{input} is ",
-    max_tokens=500, 
+        # We are using our custom Model that we trained on Cohere
+    model='ac27b139-681e-490e-a66a-e6188b96bacf-ft',
+    prompt=input, # take the input from the user
+    max_tokens=300, 
     temperature=0.9, 
     k=0, 
     p=0.75, 
