@@ -5,4 +5,4 @@ matplotlib
 plotly
 cohere
 emoji 
-
+conversant
