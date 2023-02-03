@@ -6,7 +6,6 @@
 # You may obtain a copy of the License in the LICENSE file at the top
 # level of this repository.
 
-!pip install emoji
 
 import ast
 import copy
