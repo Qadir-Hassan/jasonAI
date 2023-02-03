@@ -1,8 +1,6 @@
 import streamlit as st
 import cohere
-from dotenv import load_dotenv
-import os
-load_dotenv()
+
 
 #API key
 co = cohere.Client('SOtiECjBHrLmJMpIeA9HyVlqhhSoNFLOdg5Tc1bp') 
