@@ -24,7 +24,7 @@ from conversant.utils import demo_utils
 # e.g. "/Users/yourname/custom-personas"
 # If the line is left as `CUSTOM_PERSONA_DIRECTORY = None`
 # the Streamlit app will use the demo presets
-CUSTOM_PERSONA_DIRECTORY = jasonai/sandbox-conversant-lib/conversant/personas
+#CUSTOM_PERSONA_DIRECTORY = jasonai/sandbox-conversant-lib/conversant/personas
 USER_AVATAR_SHORTCODE = ":bust_in_silhouette:"
 
 
@@ -48,9 +48,9 @@ def initialize_chatbot() -> None:
         st.session_state.bot = PromptChatbot.from_persona(
             emoji.replace_emoji(st.session_state.persona, "").strip(),
             client=cohere.Client(os.environ.get("COHERE_API_KEY")),
-            persona_dir=CUSTOM_PERSONA_DIRECTORY
-            if CUSTOM_PERSONA_DIRECTORY
-            else PERSONA_MODEL_DIRECTORY,
+            #persona_dir=CUSTOM_PERSONA_DIRECTORY
+            #if CUSTOM_PERSONA_DIRECTORY
+            #else PERSONA_MODEL_DIRECTORY,
         )
     if "bot" in st.session_state and st.session_state.bot:
         update_session_with_prompt()
@@ -72,10 +72,10 @@ def update_session_with_prompt() -> None:
         st.session_state.snapshot_client_config = copy.deepcopy(
             st.session_state.bot.client_config
         )
-        st.session_state.current_stop_sequences = [
-            utils.escape_string(stop_seq)
-            for stop_seq in st.session_state.bot.client_config["stop_sequences"]
-        ]
+        #st.session_state.current_stop_sequences = [
+        #    utils.escape_string(stop_seq)
+        #    for stop_seq in st.session_state.bot.client_config["stop_sequences"]
+        #]
 
 
 def update_prompt_from_json() -> None:
