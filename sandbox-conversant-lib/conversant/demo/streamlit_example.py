@@ -24,7 +24,7 @@ from conversant.utils import demo_utils
 # e.g. "/Users/yourname/custom-personas"
 # If the line is left as `CUSTOM_PERSONA_DIRECTORY = None`
 # the Streamlit app will use the demo presets
-#CUSTOM_PERSONA_DIRECTORY = jasonai/sandbox-conversant-lib/conversant/personas
+CUSTOM_PERSONA_DIRECTORY = "https://github.com/kojomensahonums/jasonai/tree/master/sandbox-conversant-lib/conversant/personas"
 USER_AVATAR_SHORTCODE = ":bust_in_silhouette:"
 
 
@@ -72,10 +72,10 @@ def update_session_with_prompt() -> None:
         st.session_state.snapshot_client_config = copy.deepcopy(
             st.session_state.bot.client_config
         )
-        #st.session_state.current_stop_sequences = [
-        #    utils.escape_string(stop_seq)
-        #    for stop_seq in st.session_state.bot.client_config["stop_sequences"]
-        #]
+        st.session_state.current_stop_sequences = [
+            utils.escape_string(stop_seq)
+            for stop_seq in st.session_state.bot.client_config["stop_sequences"]
+        ]
 
 
 def update_prompt_from_json() -> None:
