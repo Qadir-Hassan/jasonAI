@@ -24,7 +24,7 @@ from conversant.utils import demo_utils
 # e.g. "/Users/yourname/custom-personas"
 # If the line is left as `CUSTOM_PERSONA_DIRECTORY = None`
 # the Streamlit app will use the demo presets
-CUSTOM_PERSONA_DIRECTORY = None
+CUSTOM_PERSONA_DIRECTORY = [a link] (https://github.com/kojomensahonums/jasonai/blob/master/sandbox-conversant-lib/conversant/personas)
 USER_AVATAR_SHORTCODE = ":bust_in_silhouette:"
 
 
