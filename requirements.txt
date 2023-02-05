@@ -3,6 +3,6 @@
 #pandas
 #matplotlib
 #plotly
-#cohere
-#emoji 
-#conversant
+cohere
+emoji 
+conversant
